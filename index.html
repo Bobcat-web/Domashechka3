@@ -1,0 +1,51 @@
+<!-- <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domashechka</title>
+</head>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кнопка в стиле неоморфизма</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="button" id="myButton"></div>
+    <script>
+        const button = document.getElementById('myButton');
+
+        button.addEventListener('click', () => {
+            button.classList.toggle('active');
+            setTimeout(() => {
+                button.classList.toggle('active');
+            }, 500);
+        });
+    </script>
+
+
+<div class="clickbox"><p>Bybyby</p></div>
+<script>
+    let box = document.querySelectorAll(".clickbox");
+box.forEach(function(clickbox){
+    clickbox.addEventListener("click", function(){
+        if(clickbox.style.backgroundColor === "lightsteelblue"){
+            clickbox.style.backgroundColor = "yellow";
+            clickbox.style.margin = '-3vw';
+            console.log("change color");
+        }
+        else{
+            clickbox.style.backgroundColor = "lightsteelblue";
+            clickbox.style.margin = '5vw';
+        }
+    });
+});
+</script>
+</body>
+</html>
